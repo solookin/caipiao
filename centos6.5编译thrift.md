@@ -52,7 +52,7 @@ If you will be developing Apache Thrift clients/servers in C++ you will also nee
 
 ### Install C++ Lib Dependencies
 
-	sudo yum -y install libevent-devel zlib-devel openssl-devel
+	sudo yum -y install libevent2 libevent2-devel zlib-devel openssl-devel
 
 ### Upgrade Boost >= 1.53
 
