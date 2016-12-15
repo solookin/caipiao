@@ -1,20 +1,20 @@
-# Building Apache Thrift on CentOS 6.5
+# CentOS 6.5 编译 Apache Thrift 0.9.3
 
-Starting with a minimal installation, the following steps are required to build Apache Thrift on Centos 6.5. This example builds from source, using the current development master branch. These instructions should also work with Apache Thrift releases beginning with 0.9.2.
+下面是CentOS 6.5 编译 Apache Thrift 0.9.3，能够遇到的坑。
 
-## Update the System
+## 更新系统 - 这一步可能需要可能不需要，看情况。
 
-	sudo yum -y update
+sudo yum -y update
 
-## Install the Platform Development Tools
+## 安装编译环境，如果已经安装了就不需要了
 
-	sudo yum -y groupinstall "Development Tools"
+sudo yum -y groupinstall "Development Tools"
 
-## Upgrade autoconf/automake/bison
+## 升级 autoconf/automake/bison
 
 	sudo yum install -y wget
 
-### Upgrade autoconf
+### 升级 autoconf
 
 	wget http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz
 	tar xvf autoconf-2.69.tar.gz
@@ -24,7 +24,7 @@ Starting with a minimal installation, the following steps are required to build 
 	sudo make install
 	cd ..
 
-### Upgrade automake
+### 升级 automake
 
 	wget http://ftp.gnu.org/gnu/automake/automake-1.14.tar.gz
 	tar xvf automake-1.14.tar.gz
@@ -34,7 +34,7 @@ Starting with a minimal installation, the following steps are required to build 
 	sudo make install
 	cd ..
 
-### Upgrade bison
+### 升级 bison
 
 	wget http://ftp.gnu.org/gnu/bison/bison-2.5.1.tar.gz
 	tar xvf bison-2.5.1.tar.gz
@@ -44,7 +44,7 @@ Starting with a minimal installation, the following steps are required to build 
 	sudo make install
 	cd ..
 
-## Add Optional C++ Language Library Dependencies
+## 安装C++库的依赖
 
 All languages require the Apache Thrift IDL Compiler and at this point everything needed to make the IDL Compiler is installed (if you only need the compiler you can skip to the Build step). 
 
