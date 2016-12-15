@@ -67,7 +67,7 @@ If you will be developing Apache Thrift clients/servers in C++ you will also nee
 	git clone https://git-wip-us.apache.org/repos/asf/thrift.git
 	cd thrift
 	./bootstrap.sh
-	./configure --with-lua=no
+	./configure --with-lua=no --with-csharp=no --with-boost=/usr/local/boost_1.53 --with-php=no
 	make
 	sudo make install
 
