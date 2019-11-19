@@ -1,11 +1,4 @@
-# 技术博客
-技术文档汇集地
+# 彩票中心
+各种国际彩票数据汇集
 
-```
-#include <iostream>
-int main()
-{
-  std::cout << "hello, world!" << std::endl;
-  return 0;
-}
-```
+
